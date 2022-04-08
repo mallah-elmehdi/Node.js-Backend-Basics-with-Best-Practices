@@ -1,0 +1,20 @@
+{
+  "name": "Node.js-Backend-Basics-with-Best-Practices",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mallah-elmehdi/Node.js-Backend-Basics-with-Best-Practices.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mallah-elmehdi/Node.js-Backend-Basics-with-Best-Practices/issues"
+  },
+  "homepage": "https://github.com/mallah-elmehdi/Node.js-Backend-Basics-with-Best-Practices#readme"
+}
