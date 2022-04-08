@@ -10,7 +10,13 @@ dotenv.config({
     path: '.env'
 })
 
+// routes
+const userRoute = require('./routes/userRoute');
 
+// middleware
+app.use("/user", userRoute);
 
 // server
-app.listen(process.env.PORT)
+app.listen(process.env.PORT, () => {
+    console.log('server runing...');
+})
