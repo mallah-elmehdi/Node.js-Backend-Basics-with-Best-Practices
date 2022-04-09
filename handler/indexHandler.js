@@ -1,9 +1,10 @@
 // get the user route
-const getIndex = (req, res) => {
-    return res.json({
-        success: true,
-        page: "home page",
-    });
+const getIndex = (req, res, next) => {
+    try {
+        return res.status(200).send("home");
+    } catch (err) {
+        return next(err);
+    }
 }
 
 module.exports = {

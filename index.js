@@ -13,10 +13,12 @@ dotenv.config({
 // routes
 const indexRoute = require('./routes/indexRoute');
 const userRoute = require('./routes/userRoute');
+const errorHandler = require('./handler/errorHandler');
 
 // middleware
 app.use("/", indexRoute);
 app.use("/user", userRoute);
+app.use("*", errorHandler.notFound);
 
 // server
 app.listen(process.env.PORT, () => {
