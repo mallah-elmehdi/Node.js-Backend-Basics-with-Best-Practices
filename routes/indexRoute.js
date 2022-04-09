@@ -2,7 +2,7 @@
 const express = require('express');
 
 // handler
-const userHandler = require('../handler/userHandler');
+const indexHandler = require('../handler/indexHandler');
 
 // set up the router
 const router = express.Router();
@@ -10,11 +10,7 @@ const router = express.Router();
 // route '/'
 router
     .route('/')
-    .get(userHandler.getUser);
-//
-router
-    .route('/:id')
-    .get(userHandler.getUserById);
+    .get(indexHandler.getIndex);
 
 // exports
 module.exports = router;

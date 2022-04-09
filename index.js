@@ -11,9 +11,11 @@ dotenv.config({
 })
 
 // routes
+const indexRoute = require('./routes/indexRoute');
 const userRoute = require('./routes/userRoute');
 
 // middleware
+app.use("/", indexRoute);
 app.use("/user", userRoute);
 
 // server
