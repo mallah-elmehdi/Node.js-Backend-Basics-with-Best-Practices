@@ -3,9 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 // data
-const userData = fs.readFileSync(path.join('static', 'json', 'user.json'), 'uft8');
-
-console.log(userData);
+const userData = JSON.parse(fs.readFileSync(path.join('static', 'json', 'user.json'), {encoding: 'utf8', flag: 'r'}));
 
 // get the user route
 const getUser = (req, res) => {
