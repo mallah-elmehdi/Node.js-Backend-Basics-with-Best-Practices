@@ -1,5 +1,4 @@
-# Node.js-Backend-Basics-with-Best-Practices
-## **simple server with NodeJS**
+# Simple server with NodeJS
 
 ### ***how to start the server?***
 ```
