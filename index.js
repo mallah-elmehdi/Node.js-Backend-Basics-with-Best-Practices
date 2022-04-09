@@ -18,6 +18,6 @@ app.use("/user", userRoute);
 app.use("*", errorHandler.notFound);
 
 // server
-app.listen(process.env.PORT, () => {
+app.listen(variables.port, () => {
     console.log('server runing...');
 })
