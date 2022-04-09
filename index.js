@@ -1,14 +1,11 @@
 // require modules
 const express = require('express');
-const dotenv = require('dotenv');
+
+// configure
+const variables = require('./config/variables');
 
 // set up the app object
 const app = express();
-
-// configure the envirenment
-dotenv.config({
-    path: '.env'
-})
 
 // routes
 const indexRoute = require('./routes/indexRoute');
