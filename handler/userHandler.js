@@ -1,19 +1,28 @@
+// require modules
+const fs = require('fs');
+const path = require('path');
+
+// data
+const userData = fs.readFileSync(path.join('static', 'json', 'user.json'), 'uft8');
+
+console.log(userData);
+
 // get the user route
 const getUser = (req, res) => {
-    return res.json({
-        success: true,
-        page: "user page"
-    });
-
+    return res.redirect('/');
 }
 
 // get the user by id route
-const getUserById = (req, res) => {
-    return res.json({
-        success: true,
-        page: "user page",
-        id: req.params.id,
-    });
+const getUserById = (req, res, next) => {
+    try {
+        return res.status(200).json({
+            status: "success",
+            userTotal: userData.total,
+            userInfo: userData.users[parseInt(req.params.id)]
+        });
+    } catch (err) {
+        return next(err);
+    }
 }
 
 module.exports = {
